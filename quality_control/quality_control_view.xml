@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+    <menuitem name="Quality control" id="qc_menu" groups="group_qc_user" sequence="85"/>
+    <menuitem name="Configuration" id="qc_menu_config" parent="qc_menu" sequence="2" groups="group_qc_manager"/>
+</data>
+</openerp>
+

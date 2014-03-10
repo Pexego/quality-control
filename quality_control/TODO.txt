@@ -1,0 +1,2 @@
+- En el many2many de las posibles respuestas del test, aparece el nombre en inglés (es decir, el original), no el que le corresponde en este idioma. Se ve cuando se cambia un texto.
+- En las inspecciones, permitir seleccionar sólo las respuestas que incluye como posibles la pregunta que le toque.

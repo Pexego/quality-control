@@ -1,0 +1,627 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* quality_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-29 20:28+0000\n"
+"PO-Revision-Date: 2014-01-29 21:29+0100\n"
+"Last-Translator: Pedro Manuel Baeza <pedro.baeza@serviciosbaeza.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: quality_control
+#: model:qc.link,name:quality_control.qc_link_stock_move
+msgid "Stock move"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.test.line,valid_value_ids:0
+msgid "Valid answers"
+msgstr ""
+
+#. module: quality_control
+#: field:product.qc.trigger.test,trigger_id:0
+msgid "Trigger"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.ui.menu,name:quality_control.qc_menu_answer
+msgid "Answers (qualitative data)"
+msgstr ""
+
+#. module: quality_control
+#: selection:qc.inspection.line,question_type:0
+#: selection:qc.question,type:0
+#: selection:qc.test.line,question_type:0
+msgid "Quantitative"
+msgstr ""
+
+#. module: quality_control
+#: field:product.qc.trigger.test,test_id:0
+#: view:qc.inspection:0
+#: field:qc.inspection,test_id:0
+#: field:qc.inspection.wizard_set_test,test_id:0
+msgid "Test"
+msgstr ""
+
+#. module: quality_control
+#: help:qc.inspection.line,actual_value_ql:0
+msgid "Value of the result if it is a qualitative question."
+msgstr ""
+
+#. module: quality_control
+#: help:qc.inspection.line,min_value:0
+msgid "Minimum allowed value if it is a quantitative question."
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection.line,actual_value_qt:0
+msgid "Quant. value"
+msgstr ""
+
+#. module: quality_control
+#: field:product.qc.trigger.test,company_id:0
+#: field:qc.answer,company_id:0
+#: field:qc.inspection,company_id:0
+#: field:qc.inspection.line,company_id:0
+#: field:qc.question,company_id:0
+#: field:qc.test,company_id:0
+#: field:qc.test.line,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.link,object:0
+msgid "Object"
+msgstr ""
+
+#. module: quality_control
+#: model:qc.link,name:quality_control.qc_link_purchase
+msgid "Purchase order"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection.line,success:0
+msgid "Success?"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+msgid "Approved"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.test,uom_id:0
+#: field:qc.test.line,uom_id:0
+msgid "UoM"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.module.category,description:quality_control.module_category_qc
+msgid "It allows to define and execute quality controls over some workflows."
+msgstr ""
+
+#. module: quality_control
+#: selection:qc.inspection.line,question_type:0
+#: selection:qc.question,type:0
+#: selection:qc.test.line,question_type:0
+msgid "Qualitative"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_qc_inspection
+msgid "qc.inspection"
+msgstr ""
+
+#. module: quality_control
+#: view:product.product:0
+#: field:product.product,qc_trigger_ids:0
+msgid "QC triggers"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+#: field:qc.inspection,external_notes:0
+msgid "External notes"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.action_qc_test_line
+#: field:qc.inspection.line,test_line_id:0
+#: view:qc.test.line:0
+msgid "Test line"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection,object_id:0
+msgid "Reference"
+msgstr ""
+
+#. module: quality_control
+#: view:product.product:0
+msgid "Quality control triggers"
+msgstr ""
+
+#. module: quality_control
+#: selection:qc.test,type:0
+msgid "Related"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_qc_inspection_wizard_set_test
+msgid "qc.inspection.wizard_set_test"
+msgstr ""
+
+#. module: quality_control
+#: model:qc.link,name:quality_control.qc_link_partner
+msgid "Partner"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.action_qc_inspection
+#: model:ir.ui.menu,name:quality_control.qc_inspection_menu
+#: model:ir.ui.menu,name:quality_control.qc_inspection_menu_child
+msgid "Inspections"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection.line,inspection_id:0
+msgid "inspection"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+msgid "Not success"
+msgstr ""
+
+#. module: quality_control
+#: model:qc.link,name:quality_control.qc_link_prodlot
+msgid "Production lot"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+msgid "Confirm inspection"
+msgstr ""
+
+#. module: quality_control
+#: selection:qc.test,type:0
+msgid "Generic"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection.line,question_id:0
+#: field:qc.test.line,question_id:0
+msgid "Question"
+msgstr ""
+
+#. module: quality_control
+#: code:addons/quality_control/qc_trigger.py:33
+#: sql_constraint:qc.trigger:0
+#, python-format
+msgid "The code of the quality control trigger tag must be unique!"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.link,priority:0
+msgid "Priority"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+#: field:qc.inspection,state:0
+msgid "State"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.test,formula:0
+msgid "Formula"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.question,type:0
+#: field:qc.test,type:0
+#: field:qc.test.line,question_type:0
+msgid "Type"
+msgstr ""
+
+#. module: quality_control
+#: selection:qc.inspection,state:0
+msgid "Waiting answers"
+msgstr ""
+
+#. module: quality_control
+#: selection:qc.inspection,state:0
+msgid "Inspection failed"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_qc_answer
+msgid "qc.answer"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.action_qc_answer
+#: view:qc.answer:0
+msgid "Answers"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+msgid "Test Filter"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_qc_question
+msgid "qc.question"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.ui.menu,name:quality_control.qc_menu_config
+msgid "Configuration"
+msgstr ""
+
+#. module: quality_control
+#: help:qc.inspection,success:0
+msgid "This field will be true if all tests have succeeded."
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection.line,valid_value_ids:0
+msgid "Allowed values"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+msgid "Inspection line"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.test,object_id:0
+msgid "Reference object"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+#: field:qc.inspection,internal_notes:0
+msgid "Internal notes"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_qc_test_line
+msgid "qc.test.line"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+msgid "Inspection"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.test:0
+msgid "Test template"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.question:0
+#: field:qc.question,value_ids:0
+msgid "Possible answers"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.action_qc_test
+#: model:ir.ui.menu,name:quality_control.qc_test_menu
+msgid "Quality tests"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+msgid "Group by..."
+msgstr ""
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.action_qc_question
+#: model:ir.ui.menu,name:quality_control.qc_menu_question
+#: view:qc.question:0
+msgid "Questions"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection.wizard_set_test:0
+msgid "or"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection,blocked:0
+msgid "Blocked"
+msgstr ""
+
+#. module: quality_control
+#: model:qc.link,name:quality_control.qc_link_sale
+msgid "Sale order"
+msgstr ""
+
+#. module: quality_control
+#: help:product.qc.trigger.test,test_id:0
+msgid "Quality control test to be used in inspections."
+msgstr ""
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_qc_test
+#: view:qc.inspection.wizard_set_test:0
+#: field:qc.test.line,test_id:0
+msgid "Quality test"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+#: selection:qc.inspection,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+msgid "Confirm results"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_qc_trigger
+msgid "Quality control trigger tag"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.question:0
+msgid "question"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection,line_ids:0
+msgid "Inspection lines"
+msgstr ""
+
+#. module: quality_control
+#: model:res.groups,name:quality_control.group_qc_user
+msgid "User"
+msgstr ""
+
+#. module: quality_control
+#: help:qc.inspection.line,actual_value_qt:0
+msgid "Value of the result if it is a quantitative question."
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection,date:0
+msgid "Date"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.test,fill_correct_values:0
+msgid "Fill with correct values?"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+#: field:qc.inspection,success:0
+msgid "Success"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection.line,actual_value_ql:0
+msgid "Qual. value"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+#: view:qc.inspection.wizard_set_test:0
+msgid "Select test"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.test,active:0
+msgid "Active"
+msgstr ""
+
+#. module: quality_control
+#: help:product.product,qc_test_trigger_ids:0
+msgid "Defines when a product must to pass a quality control test for certain operation.\n"
+msgstr ""
+
+#. module: quality_control
+#: code:addons/quality_control/qc_inspection.py:212
+#, python-format
+msgid "Error"
+msgstr ""
+
+#. module: quality_control
+#: field:product.product,qc_test_trigger_ids:0
+msgid "QC triggers > tests"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_qc_link
+msgid "Test reference types"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection,product_qty:0
+msgid "Quantity"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.question,ref:0
+#: field:qc.trigger,code:0
+msgid "Code"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection,name:0
+msgid "Number"
+msgstr ""
+
+#. module: quality_control
+#: selection:qc.inspection,state:0
+msgid "Inspection succcess"
+msgstr ""
+
+#. module: quality_control
+#: model:qc.link,name:quality_control.qc_link_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+#: view:qc.inspection.wizard_set_test:0
+msgid "Cancel"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection,res_id:0
+msgid "Resource ID"
+msgstr ""
+
+#. module: quality_control
+#: help:qc.inspection,blocked:0
+msgid "If this field is set, it means that the inspection has been generated from an automatic process and cannot be cancelled."
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection.line,min_value:0
+#: field:qc.test.line,min_value:0
+msgid "Min"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_product_product
+#: field:product.qc.trigger.test,product_id:0
+#: field:qc.inspection,product_id:0
+#: model:qc.link,name:quality_control.qc_link_product
+msgid "Product"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection.line,max_value:0
+#: field:qc.test.line,max_value:0
+msgid "Max"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_product_qc_trigger_test
+msgid "Product QC test trigger"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+msgid "Waiting"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.inspection.line,question_type:0
+msgid "Question type"
+msgstr ""
+
+#. module: quality_control
+#: model:qc.link,name:quality_control.qc_link_picking
+msgid "Picking"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+#: field:qc.inspection.line,notes:0
+#: field:qc.test.line,notes:0
+msgid "Notes"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.answer,name:0
+#: field:qc.inspection.line,name:0
+#: field:qc.link,name:0
+#: field:qc.question,name:0
+#: field:qc.test,name:0
+#: field:qc.test.line,name:0
+#: field:qc.trigger,name:0
+msgid "Name"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.action_qc_inspection_set_test_wizard
+msgid "Select quality test"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.test:0
+msgid "Test lines"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_qc_inspection_line
+msgid "qc.inspection.line"
+msgstr ""
+
+#. module: quality_control
+#: field:qc.test,line_ids:0
+msgid "Lines"
+msgstr ""
+
+#. module: quality_control
+#: help:qc.inspection.line,max_value:0
+msgid "Maximum allowed value if it is a quantitative question."
+msgstr ""
+
+#. module: quality_control
+#: code:addons/quality_control/qc_inspection.py:212
+#, python-format
+msgid "You cannot remove any inspection that is not on draft state."
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+msgid "Values"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection:0
+msgid "Approve"
+msgstr ""
+
+#. module: quality_control
+#: help:product.qc.trigger.test,trigger_id:0
+msgid "The quality control trigger tag which defines for what event a quality inspection must be done."
+msgstr ""
+
+#. module: quality_control
+#: field:qc.test.line,sequence:0
+msgid "Sequence"
+msgstr ""
+
+#. module: quality_control
+#: view:qc.inspection.wizard_set_test:0
+msgid "Accept"
+msgstr ""
+
+#. module: quality_control
+#: model:res.groups,name:quality_control.group_qc_manager
+msgid "Manager"
+msgstr ""
+
+#. module: quality_control
+#: model:ir.module.category,name:quality_control.module_category_qc
+#: model:ir.ui.menu,name:quality_control.qc_menu
+msgid "Quality control"
+msgstr ""
+
+#. module: quality_control
+#: model:res.groups,comment:quality_control.group_qc_user
+msgid "This group only enable users to aprove the quality tests."
+msgstr ""
+
+#. module: quality_control
+#: selection:qc.inspection,state:0
+msgid "Approved by supervisor"
+msgstr ""
+

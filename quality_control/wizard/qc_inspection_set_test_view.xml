@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record id="view_qc_inspection_set_test_wizard_form" model="ir.ui.view">
+      <field name="name">Wizard to set the test in inspections</field>
+      <field name="model">qc.inspection.wizard_set_test</field>
+      <field name="arch" type="xml">
+        <form string="Select test" version="7.0">
+            <separator string="Quality test"/>
+            <field name="test_id" widget="selection"/>
+            <footer>
+                <button name="action_create_test" string="Accept" type="object" class="oe_highlight"/>
+                or
+                <button string="Cancel" class="oe_link" special="cancel"/>
+            </footer>
+        </form>
+      </field>
+    </record>
+
+    <record id="action_qc_inspection_set_test_wizard" model="ir.actions.act_window">
+        <field name="name">Select quality test</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">qc.inspection.wizard_set_test</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</data>
+</openerp>
+

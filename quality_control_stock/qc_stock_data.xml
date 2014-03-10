@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="qc_trigger_input" model="qc.trigger">
+            <field name="code">stock_move_in</field>
+            <field name="name">Input stock move</field>
+        </record>
+        <record id="qc_trigger_production" model="qc.trigger">
+            <field name="code">stock_move_production</field>
+            <field name="name">Production stock move</field>
+        </record>
+    </data>
+</openerp>

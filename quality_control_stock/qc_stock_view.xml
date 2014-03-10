@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="action_qc_test_stock_move_view" model="ir.actions.act_window">
+            <field name="name">Stock move inspections</field>
+            <field name="res_model">qc.inspection</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('object_id', 'like', 'stock.move,')]</field>
+        </record>
+
+        <!-- <menuitem id="qc_test_stock_move_menu"
+                action="action_qc_test_stock_move_view"
+                name="Stock move inspections"
+                parent="quality_control.qc_inspection_menu"
+                sequence="2"/> -->
+
+    </data>
+</openerp>

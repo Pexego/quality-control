@@ -1,0 +1,20 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_qc_trigger_all","qc.trigger all","model_qc_trigger",,1,0,0,0
+"access_qc_link_user","quality_control.qc_link QC User","model_qc_link","group_qc_user",1,0,0,0
+"access_qc_possible_value_manager","quality_control.qc_answer QC Manager","model_qc_answer","group_qc_manager",1,1,1,1
+"access_qc_question_manager","quality_control.qc_question QC Manager","model_qc_question","group_qc_manager",1,1,1,1
+"access_qc_link_manager","quality_control.qc_link QC Manager","model_qc_link","group_qc_manager",1,1,1,1
+"access_qc_test_manager","quality_control.qc_test QC Manager","model_qc_test","group_qc_manager",1,1,1,1
+"access_qc_test_line_manager","quality_control.qc_test_line QC Manager","model_qc_test_line","group_qc_manager",1,1,1,1
+"access_qc_inspection_manager","quality_control.qc_inspection QC Manager","model_qc_inspection","group_qc_manager",1,1,1,1
+"access_qc_inspection_line_manager","quality_control.qc_inspection_line QC Manager","model_qc_inspection_line","group_qc_manager",1,1,1,1
+"access_qc_possible_value_user","quality_control.qc_answer QC User","model_qc_answer","group_qc_user",1,0,0,0
+"access_qc_question_user","quality_control.qc_question QC User","model_qc_question","group_qc_user",1,0,0,0
+"access_qc_test_user","quality_control.qc_test QC User","model_qc_test","group_qc_user",1,0,0,0
+"access_qc_test_line_user","quality_control.qc_test_line QC User","model_qc_test_line","group_qc_user",1,0,0,0
+"access_qc_inspection_user","quality_control.qc_inspection QC User","model_qc_inspection","group_qc_user",1,1,1,1
+"access_qc_inspection_line_user","quality_control.qc_inspection_line QC User","model_qc_inspection_line","group_qc_user",1,1,1,1
+"access_product_qc_trigger_test_employee","product.qc.trigger.test employee","model_product_qc_trigger_test","base.group_user",1,0,0,0
+"access_product_qc_trigger_test_stock_manager","product.qc.trigger.test stock manager","model_product_qc_trigger_test","stock.group_stock_manager",1,1,1,1
+"access_product_qc_trigger_test_qc_manager","product.qc.trigger.test qc manager","model_product_qc_trigger_test","quality_control.group_qc_manager",1,1,1,1
+
