@@ -31,8 +31,9 @@ class qc_inspection(orm.Model):
                     if not move_inspection.state in ['success', 'approved']:
                         break
                 else:
-                    move_obj.write(cr, uid, inspection.object_id.id,
-                                   {'state': 'done'}, context=context)
+                    move_obj.action_done(cr, uid, [inspection.object_id.id], context=context)
+                    #move_obj.write(cr, uid, inspection.object_id.id,
+                    #               {'state': 'done'}, context=context)
 
     def action_workflow_success(self, cr, uid, ids, context=None):
         super(qc_inspection, self).action_workflow_success(cr, uid, ids,

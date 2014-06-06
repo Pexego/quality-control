@@ -16,5 +16,33 @@
                 parent="quality_control.qc_inspection_menu"
                 sequence="2"/> -->
 
+        <record id="view_stock_move_quality_form" model="ir.ui.view">
+            <field name="name">stock.move.quality.form.inherit</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <group name="destination_grp" position="after">
+                        <group name="quality_control" string="Quality control" colspan="2">
+                            <field name="inspection_ids" />
+                        </group>
+                    </group>
+                </data>
+            </field>
+        </record>
+
+        <record id="stock_move_quality_2" model="ir.ui.view">
+            <field name="name">stock.move.quality.form2</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@string='Traceability']" position="after">
+                    <group name="quality_control" string="Quality control" colspan="2">
+                        <field name="inspection_ids" />
+                    </group>
+               </xpath>
+            </field>
+        </record>
+
     </data>
 </openerp>

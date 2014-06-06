@@ -15,7 +15,7 @@
 #    along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp.osv import orm, fields
+from openerp.osv import orm, fields, osv
 from openerp.tools.translate import _
 from openerp import netsvc
 from openerp import SUPERUSER_ID
@@ -30,27 +30,68 @@ class stock_move(orm.Model):
                 help="Defines the QC inspections this move must pass."),
     }
 
+
+    # def action_assign(self, cr, uid, ids, *args):
+    #     res = super(stock_move, self).action_assign(cr, uid, ids)
+    #     move_obj = self.pool['stock.move']
+    #     for move in move_obj.browse (cr, uid ,ids):
+    #         move_obj._create_qc_inspection_from_move (cr,
+    #                                               uid, move, False)
+    #     return res
+
+    def create (self, cr, uid, vals, context=None):
+         res = super(stock_move, self).create(cr, uid, vals,
+                                                      context=context)
+         # CHECK triggers only by location
+         #TODO Check another condition for creating test
+
+         move_obj = self.pool['stock.move']
+         move_obj._create_qc_inspection_from_move (cr,
+                                                   uid, move_obj.browse (cr, uid ,res, context),False, context)
+         return res
+
+
     def action_done(self, cr, uid, ids, context=None):
         res = super(stock_move, self).action_done(cr, uid, ids,
                                                      context=context)
-        input_trigger_id = self.pool['qc.trigger'].search(cr, uid,
-                    [('code', '=', 'stock_move_in')], context=context)
-        if input_trigger_id:
-            input_trigger_id = input_trigger_id[0]
-            for move in self.browse(cr, uid, ids, context=context):
-                do_inspection = False
-                if not move.picking_id or move.picking_id.type != 'in':
+        for move in self.browse(cr, uid, ids, context=context):
+            inspection_done = True
+
+            for inspection in move.inspection_ids:
+                 if not inspection.state in ['success', 'approved']:
+                    inspection_done = False
                     continue
-                for test_trigger in move.product_id.qc_test_trigger_ids:
-                    if test_trigger.trigger_id.id == input_trigger_id:
-                        do_inspection = True
-                if do_inspection:
-                    self._create_qc_inspection_from_move(cr, uid, move,
-                                    input_trigger_id, context=context)
-                    # Back to waiting state until inspections will be done
-                    self.write(cr, uid, [move.id], {'state': 'waiting'},
-                               context=context)
+            if not inspection_done:
+                self.write(cr, uid, [move.id], {'state': 'assigned'},
+                                context=context)
+                raise osv.except_osv(_('Aviso!'),
+                    _('No se han aprobado los controles de calidad para el producto %s.') % (move.product_id.name))
+
+
         return res
+
+
+    # def action_done(self, cr, uid, ids, context=None):
+    #     res = super(stock_move, self).action_done(cr, uid, ids,
+    #                                                  context=context)
+    #     input_trigger_id = self.pool['qc.trigger'].search(cr, uid,
+    #                 [('code', '=', 'stock_move_in')], context=context)
+    #     if input_trigger_id:
+    #         input_trigger_id = input_trigger_id[0]
+    #         for move in self.browse(cr, uid, ids, context=context):
+    #             do_inspection = False
+    #             if not move.picking_id or move.picking_id.type != 'in':
+    #                 continue
+    #             for test_trigger in move.product_id.qc_test_trigger_ids:
+    #                 if test_trigger.trigger_id.id == input_trigger_id:
+    #                     do_inspection = True
+    #             if do_inspection:
+    #                 self._create_qc_inspection_from_move(cr, uid, move,
+    #                                 input_trigger_id, context=context)
+    #                 # Back to waiting state until inspections will be done
+    #                 self.write(cr, uid, [move.id], {'state': 'waiting'},
+    #                            context=context)
+    #     return res
 
     def _calc_qc_inspection_vals(self, cr, uid, move, context=None):
         """
@@ -65,7 +106,9 @@ class stock_move(orm.Model):
             'blocked': True,
         }
 
-    def _create_qc_inspection_from_move(self, cr, uid, move, trigger_id,
+
+
+    def _create_qc_inspection_from_move(self, cr, uid, move, trigger_id =False,
             context=None):
         """
         Create and write into stock move QC inspections corresponding to a
@@ -78,8 +121,14 @@ class stock_move(orm.Model):
         inspection_ids = []
         # TODO: Añadir aquí la búsqueda para los tests de compañía
         for test_trigger in move.product_id.qc_test_trigger_ids:
-            if test_trigger.trigger_id.id != trigger_id:
-                continue
+            if trigger_id:
+                if test_trigger.trigger_id.id != trigger_id:
+                    continue
+            else:
+                # Check trigger rules
+                if not (test_trigger.trigger_id.location_id.id == move.location_id.id \
+                        or test_trigger.trigger_id.location_dest_id.id == move.location_dest_id.id):
+                    continue
             vals = self._calc_qc_inspection_vals(cr, uid, move,
                                                   context=context)
             inspection_id = qc_inspection_obj.create(cr, SUPERUSER_ID, vals,

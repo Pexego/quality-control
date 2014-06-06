@@ -26,6 +26,11 @@ class qc_trigger(orm.Model):
     _columns = {
         'code': fields.char('Code', size=30, required=True),
         'name': fields.char('Name', size=128, required=True, translate=True),
+        'location_id': fields.many2one('stock.location', 'Source Location', required=False, help="Source location for triggering."),
+        'location_dest_id': fields.many2one('stock.location', 'Destination Location', required=False, help="Destination location for triggering."),
+        'journal_id': fields.many2one('stock.journal', 'Stock Journal', required=False, help="Stock journal for triggering."),
+        'picking_type': fields.selection([('out', 'Sending Goods'), ('in', 'Getting Goods'), ('internal', 'Internal')], 'Picking Type'),
+
     }
 
     _sql_constraints = [

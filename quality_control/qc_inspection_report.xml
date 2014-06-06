@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <report id="report_qc_inspection"
+            name="qc.inspection.webkit"
+            auto="False"
+            model="qc.inspection"
+            file="quality_control/report/qc_inspection.mako"
+            string="QC Inspection"
+            webkit_header="base_headers_webkit.base_reports_portrait_header"
+            report_type="webkit"/>
+  </data>
+</openerp>

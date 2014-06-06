@@ -9,11 +9,13 @@
             <form string="Inspection" version="7.0">
                 <header>
                     <field name="blocked" invisible="1"/>
+                    <button name="print_report" string="Print" type="object"/>
                     <button name="confirm" states="draft" string="Confirm inspection" icon="gtk-ok"/>
                     <button name="send" states="waiting" string="Confirm results" icon="gtk-ok"/>
                     <button name="approve" states="failed" string="Approve" groups="quality_control.group_qc_manager" icon="gtk-ok"/>
                     <button name="cancel" attrs="{'invisible': ['|', ('blocked', '=', True), ('state', '=', 'draft')]}" string="Cancel" icon="gtk-cancel"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,waiting"/>
+
                 </header>
                 <sheet>
                     <group>

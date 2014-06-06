@@ -67,7 +67,9 @@ The complete inspection workflow is:
 Based on the nan_quality_control_* modules from NaN·tic.
     """,
     "depends": [
-        'product'
+        'product',
+        'stock',
+        'base_headers_webkit'
     ],
     "images": [
     ],
@@ -79,7 +81,9 @@ Based on the nan_quality_control_* modules from NaN·tic.
         'qc_question_view.xml',
         'qc_answer_view.xml',
         'qc_test_view.xml',
+        'qc_trigger_view.xml',
         'qc_inspection_view.xml',
+        'qc_inspection_report.xml',
         'qc_inspection_workflow.xml',
         'product_view.xml',
         #'company_view.xml',

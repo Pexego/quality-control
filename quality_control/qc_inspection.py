@@ -129,6 +129,19 @@ class qc_inspection(orm.Model):
                 data['actual_value_qt'] = test_line.min_value
         return data
 
+
+    def print_report(self, cr, uid, ids, context=None):
+        '''
+        This function prints the request for quotation and mark it as sent, so that we can see more easily the next step of the workflow
+        '''
+
+        datas = {
+                 'model': 'qc.inspection',
+                 'ids': ids,
+                 'form': self.read(cr, uid, ids[0], context=context),
+        }
+        return {'type': 'ir.actions.report.xml', 'report_name': 'qc.inspection.webkit', 'datas': datas, 'nodestroy': True}
+
     def set_test(self, cr, uid, ids, test_id, force_fill=False, context=None):
         insp_line_obj = self.pool['qc.inspection.line']
         test = self.pool['qc.test'].browse(cr, uid, test_id, context=context)
